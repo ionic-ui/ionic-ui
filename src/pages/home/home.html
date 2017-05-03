@@ -8,14 +8,18 @@
   <ion-navbar color="primary">
     <ion-title>Ionic UI</ion-title>
   </ion-navbar>
+  <ion-toolbar color="primary">
+    <ion-searchbar [(ngModel)]="filterPage" placeholder="Search pages" [showCancelButton]="true"></ion-searchbar>
+  </ion-toolbar>
 
 </ion-header>
 
 
 <ion-content>
   <ion-list>
-    <button *ngFor="let p of pages" ion-item [navPush]="p.component">
-      {{p.title}}
+    <button *ngFor="let page of pages | filter:filterPage" ion-item [navPush]="page.component">
+      <h2>{{page.title}}</h2>
+      <p><ion-note>{{page.tags}}</ion-note></p>
     </button>
   </ion-list>
 </ion-content>

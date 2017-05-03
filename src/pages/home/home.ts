@@ -7,17 +7,23 @@ import { Microblogging } from '../microblogging/microblogging';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html',
+  templateUrl: 'home.html'
 })
 export class Home {
 
-  public pages;
+  public filterPage = '';
+  public pages:Array<any>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+    this.initializePages();
+  }
+
+  initializePages() {
     this.pages = [
-      { title: 'Blank',             component: Blank },
-      { title: 'Messages',          component: Messages },
-      { title: 'Microblogging',     component: Microblogging }
+      { title: 'Blank',             component: Blank,           tags: '' },
+      { title: 'Messages',          component: Messages,        tags: 'message, messenger, facebook, chat, profil' },
+      { title: 'Microblogging',     component: Microblogging,   tags: 'twitter, post' }
     ];
   }
 

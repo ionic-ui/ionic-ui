@@ -6,6 +6,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 
+import { ArrayFilterPipe } from '../pipes/array-filter.pipe';
+
 import { Blank } from '../pages/blank/blank';
 import { Home } from '../pages/home/home';
 import { Messages } from '../pages/messages/messages';
@@ -14,6 +16,7 @@ import { Microblogging } from '../pages/microblogging/microblogging';
 @NgModule({
   declarations: [
     MyApp,
+    ArrayFilterPipe,
     Blank,
     Home,
     Messages,
