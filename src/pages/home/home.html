@@ -1,0 +1,21 @@
+<!--
+  Created by ionic-ui.
+
+  Visit http://ionic-ui.io for more pages
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Ionic UI</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <button *ngFor="let p of pages" ion-item [navPush]="p.component">
+      {{p.title}}
+    </button>
+  </ion-list>
+</ion-content>

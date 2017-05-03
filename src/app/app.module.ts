@@ -7,6 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 
 import { Blank } from '../pages/blank/blank';
+import { Home } from '../pages/home/home';
 import { Messages } from '../pages/messages/messages';
 import { Microblogging } from '../pages/microblogging/microblogging';
 
@@ -14,6 +15,7 @@ import { Microblogging } from '../pages/microblogging/microblogging';
   declarations: [
     MyApp,
     Blank,
+    Home,
     Messages,
     Microblogging
   ],
@@ -21,12 +23,14 @@ import { Microblogging } from '../pages/microblogging/microblogging';
     BrowserModule,
     IonicModule.forRoot(MyApp, {
       // mode: 'md',
+      backButtonText: ''
     })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     Blank,
+    Home,
     Messages,
     Microblogging
   ],
