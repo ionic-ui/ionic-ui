@@ -1,22 +1,66 @@
 page-microblogging {
-  [microblogging-item]{
+  [microblogging-item].item-block{
+    padding: 0;
+    .item-inner{
+      padding-right: 0;
+    }
     ion-label{
       overflow: visible;
+      margin: 0;
     }
     ion-card{
       width: 100%;
     }
+    ion-avatar[item-left]{
+      min-width: 100%;
+      min-height: 100%;
+      margin: 0;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    [microblogging-item-highlight]{
+      font-size: 2rem;
+      font-weight: 200;
+    }
     [microblogging-item-header]{
+      margin-bottom: 5px;
       h3, p{
         margin: 0;
         line-height: 1.5rem;
       }
     }
-    [microblogging-item-supheader]{
+    [microblogging-item-footer]{
+      margin-top: 5px;
+    }
+    [microblogging-item-note]{
+      ion-col{
+        padding-top: 0;
+      }
       ion-note{
         font-size: 1.2rem;
         line-height: 0;
       }
     }
   }
+
+  $platforms: ios, md, wp;
+  $list-border-color: $list-ios-border-color, $list-md-border-color, $list-wp-border-color;
+  $card-border-radius: $card-ios-border-radius, $card-md-border-radius, $card-wp-border-radius;
+
+  @for $i from 1 through length($platforms){
+    .content-#{nth($platforms, $i)}{
+      @debug $i;
+      background-color: nth($list-border-color, $i);
+      [microblogging-item].item-block{
+        ion-avatar[item-left]{
+          img{
+            border-radius: nth($card-border-radius, $i);
+          }
+        }
+      }
+    }
+  }
+
 }
