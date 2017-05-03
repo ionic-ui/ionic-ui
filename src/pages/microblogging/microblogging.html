@@ -1,0 +1,197 @@
+<!--
+  Created by ionic-ui.
+
+  Visit http://ionic-ui.io for more pages
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons start>
+      <button ion-button icon-only>
+        <ion-icon name="person-add"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>microblogging</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="create"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-list>
+    <ion-item microblogging-item>
+      <ion-grid no-padding>
+        <ion-row align-items-center microblogging-item-header>
+          <ion-col col-2>
+            <ion-avatar item-left>
+              <img src="https://www.dropbox.com/s/dsib1o4085rt8ep/doctor-ms.png?raw=1">
+            </ion-avatar>
+          </ion-col>
+          <ion-col>
+            <h3>The Doctor</h3>
+            <p><ion-note>@eleventh - 1h</ion-note></p>
+          </ion-col>
+          <ion-col col-2 text-right>
+            <ion-note no-padding no-margin ion-button icon-only clear small (click)="presentActionSheet()">
+              <ion-icon name="more"></ion-icon>
+            </ion-note>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col offset-2>
+            <p text-wrap><a>@Alaya</a> No, you’re really not. Because I’m the last of my species and I know how it sits in a heart. So don’t insult me! Let’s start again. <a>#TellMeYourName</a></p>
+            <ion-row>
+              <ion-col col-3>
+                <ion-note no-padding no-margin ion-button icon-left clear small>
+                  <ion-icon name="redo"></ion-icon>
+                  <div>12</div>
+                </ion-note>
+              </ion-col>
+              <ion-col col-3>
+                <ion-note no-padding no-margin ion-button icon-left clear small>
+                  <ion-icon name="repeat"></ion-icon>
+                  <div>4</div>
+                </ion-note>
+              </ion-col>
+              <ion-col col-3>
+                <ion-note no-padding no-margin ion-button icon-left clear small>
+                  <ion-icon name="heart"></ion-icon>
+                  <div>123</div>
+                </ion-note>
+              </ion-col>
+              <ion-col col-3>
+                <ion-note no-padding no-margin ion-button icon-left clear small>
+                  <ion-icon name="chatbubbles"></ion-icon>
+                </ion-note>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item microblogging-item>
+      <ion-grid no-padding>
+        <ion-row microblogging-item-supheader>
+          <ion-col offset-2>
+            <ion-note><ion-icon name="heart"></ion-icon> Rory Pond like</ion-note>
+          </ion-col>
+        </ion-row>
+        <ion-row align-items-center microblogging-item-header>
+          <ion-col col-2>
+            <ion-avatar item-left>
+              <img src="https://www.dropbox.com/s/2nx7vh9tt4hosb6/amy-pond.png?raw=1">
+            </ion-avatar>
+          </ion-col>
+          <ion-col>
+            <h3>Amy pond</h3>
+            <p><ion-note>@amelia - 2h</ion-note></p>
+          </ion-col>
+          <ion-col col-2 text-right>
+            <ion-note no-padding no-margin ion-button icon-only clear small (click)="presentActionSheet()">
+              <ion-icon name="more"></ion-icon>
+            </ion-note>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col offset-2>
+            <p text-wrap><a>@eleventh</a> What do you mean it's a statue when you see it?</p>
+            <ion-card no-margin margin-top>
+              <img src="https://www.dropbox.com/s/g31hm7og3u4azuv/angel.png?raw=1">
+            </ion-card>
+            <ion-row>
+              <ion-col col-3>
+                <ion-note no-padding no-margin ion-button icon-left clear small>
+                  <ion-icon name="redo"></ion-icon>
+                  <div>2</div>
+                </ion-note>
+              </ion-col>
+              <ion-col col-3>
+                <ion-note no-padding no-margin ion-button icon-left clear small>
+                  <ion-icon name="repeat"></ion-icon>
+                  <div>6</div>
+                </ion-note>
+              </ion-col>
+              <ion-col col-3>
+                <ion-note no-padding no-margin ion-button icon-left clear small>
+                  <ion-icon name="heart"></ion-icon>
+                  <div>35</div>
+                </ion-note>
+              </ion-col>
+              <ion-col col-3>
+                <ion-note no-padding no-margin ion-button icon-left clear small>
+                  <ion-icon name="chatbubbles"></ion-icon>
+                </ion-note>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item microblogging-item>
+      <ion-grid no-padding>
+        <ion-row microblogging-item-supheader>
+          <ion-col offset-2>
+            <ion-note><ion-icon name="heart"></ion-icon> toto like</ion-note>
+          </ion-col>
+        </ion-row>
+        <ion-row align-items-center microblogging-item-header>
+          <ion-col col-2>
+            <ion-avatar item-left>
+              <img src="https://www.dropbox.com/s/s7vumy9o6rv8n59/rory-williams.png?raw=1">
+            </ion-avatar>
+          </ion-col>
+          <ion-col>
+            <h3>Rory Williams</h3>
+            <p><ion-note>@rorypond - 23/01/2017</ion-note></p>
+          </ion-col>
+          <ion-col col-2 text-right>
+            <ion-note no-padding no-margin ion-button icon-only clear small (click)="presentActionSheet()">
+              <ion-icon name="more"></ion-icon>
+            </ion-note>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col offset-2>
+            <p text-wrap>After what happened with Prisoner Zero, I've been reading up on all the latest scientific theories. FTL travel, parallel universes... <a>#timetravel</a></p>
+            <ion-card no-margin margin-top>
+              <img src="https://www.dropbox.com/s/1qn9ggs2xvxiwuc/cosmos.jpeg?raw=1">
+              <ion-card-content>
+                Cosmos
+                <p><ion-note>Season 1 - Episode 1</ion-note></p>
+              </ion-card-content>
+            </ion-card>
+            <ion-row>
+              <ion-col col-3>
+                <ion-note no-padding no-margin ion-button icon-left clear small>
+                  <ion-icon name="redo"></ion-icon>
+                  <div>78</div>
+                </ion-note>
+              </ion-col>
+              <ion-col col-3>
+                <ion-note no-padding no-margin ion-button icon-left clear small>
+                  <ion-icon name="repeat"></ion-icon>
+                  <div>2</div>
+                </ion-note>
+              </ion-col>
+              <ion-col col-3>
+                <ion-note no-padding no-margin ion-button icon-left clear small>
+                  <ion-icon name="heart"></ion-icon>
+                  <div>345</div>
+                </ion-note>
+              </ion-col>
+              <ion-col col-3>
+                <ion-note no-padding no-margin ion-button icon-left clear small>
+                  <ion-icon name="chatbubbles"></ion-icon>
+                </ion-note>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+</ion-content>

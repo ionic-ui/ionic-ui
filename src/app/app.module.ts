@@ -7,20 +7,28 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 
 import { Blank } from '../pages/blank/blank';
+import { Messages } from '../pages/messages/messages';
+import { Microblogging } from '../pages/microblogging/microblogging';
 
 @NgModule({
   declarations: [
     MyApp,
-    Blank
+    Blank,
+    Messages,
+    Microblogging
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      // mode: 'md',
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    Blank
+    Blank,
+    Messages,
+    Microblogging
   ],
   providers: [
     StatusBar,

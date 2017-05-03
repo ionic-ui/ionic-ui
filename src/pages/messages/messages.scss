@@ -1,0 +1,17 @@
+page-messages {
+  .messages-scrolllist{
+    white-space: nowrap;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    .messages-scrolllist__item{
+      display: inline-flex;
+      width: auto;
+      flex-direction: column;
+      width: 100px;
+      .item-inner{
+        background-image: none;
+        padding: 0;
+      }
+    }
+  }
+}

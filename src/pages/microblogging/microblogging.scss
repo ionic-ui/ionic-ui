@@ -1,0 +1,22 @@
+page-microblogging {
+  [microblogging-item]{
+    ion-label{
+      overflow: visible;
+    }
+    ion-card{
+      width: 100%;
+    }
+    [microblogging-item-header]{
+      h3, p{
+        margin: 0;
+        line-height: 1.5rem;
+      }
+    }
+    [microblogging-item-supheader]{
+      ion-note{
+        font-size: 1.2rem;
+        line-height: 0;
+      }
+    }
+  }
+}

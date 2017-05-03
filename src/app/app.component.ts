@@ -4,11 +4,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { Blank } from '../pages/blank/blank';
+import { Messages } from '../pages/messages/messages';
+import { Microblogging } from '../pages/microblogging/microblogging';
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = Blank;
+
+  rootPage:any = Microblogging;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
