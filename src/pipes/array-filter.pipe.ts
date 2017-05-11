@@ -18,10 +18,12 @@ export class ArrayFilterPipe implements PipeTransform {
     //     });
     // }
 
-    transform(items: any[], filter: Object): any {
+    //TODO : Ajouter le lowercase
+
+    transform(items: any[], filter: string): any {
         if (!items || !filter) {
             return items;
         }
-        return items.filter(item => item.tags.indexOf(filter) !== -1);
+        return items.filter(item => item.tags.indexOf(filter.toLowerCase()) !== -1);
     }
 }
