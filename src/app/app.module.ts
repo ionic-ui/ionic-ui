@@ -10,6 +10,7 @@ import { ArrayFilterPipe } from '../pipes/array-filter.pipe';
 
 import { Blank } from '../pages/blank/blank';
 import { Home } from '../pages/home/home';
+import { Profile } from '../pages/profile/profile';
 import { Messages } from '../pages/messages/messages';
 import { Microblogging } from '../pages/microblogging/microblogging';
 
@@ -19,6 +20,7 @@ import { Microblogging } from '../pages/microblogging/microblogging';
     ArrayFilterPipe,
     Blank,
     Home,
+    Profile,
     Messages,
     Microblogging
   ],
@@ -34,6 +36,7 @@ import { Microblogging } from '../pages/microblogging/microblogging';
     MyApp,
     Blank,
     Home,
+    Profile,
     Messages,
     Microblogging
   ],
