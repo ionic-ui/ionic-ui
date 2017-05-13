@@ -12,6 +12,9 @@ import { Blank } from '../pages/blank/blank';
 import { Home } from '../pages/home/home';
 import { Messages } from '../pages/messages/messages';
 import { Microblogging } from '../pages/microblogging/microblogging';
+import { Profile } from '../pages/profile/profile';
+import { Slider } from '../pages/slider/slider';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import { Microblogging } from '../pages/microblogging/microblogging';
     Blank,
     Home,
     Messages,
-    Microblogging
+    Microblogging,
+    Profile,
+    Slider
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,9 @@ import { Microblogging } from '../pages/microblogging/microblogging';
     Blank,
     Home,
     Messages,
-    Microblogging
+    Microblogging,
+    Profile,
+    Slider
   ],
   providers: [
     StatusBar,
