@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { Blank } from '../blank/blank';
-import { Profile } from '../profile/profile';
 import { Messages } from '../messages/messages';
 import { Microblogging } from '../microblogging/microblogging';
+import { Profile } from '../profile/profile';
+import { Slider } from '../slider/slider';
 
 @Component({
   selector: 'page-home',
@@ -23,9 +24,10 @@ export class Home {
   initializePages() {
     this.pages = [
       { title: 'Blank',             component: Blank,           tags: '' },
-      { title: 'Profile',           component: Profile,         tags: 'profile, avatar' },
       { title: 'Messages',          component: Messages,        tags: 'message, messenger, facebook, chat, profil' },
-      { title: 'Microblogging',     component: Microblogging,   tags: 'twitter, post' }
+      { title: 'Microblogging',     component: Microblogging,   tags: 'twitter, post' },
+      { title: 'Profile',           component: Profile,         tags: 'profile, avatar' },
+      { title: 'Slider',            component: Slider,          tags: 'slider, poll' }
     ];
   }
 
