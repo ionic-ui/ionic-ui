@@ -1,0 +1,90 @@
+page-identification {
+
+  .toolbar-background,
+  .toolbar-ios-primary .toolbar-background-ios,
+  .toolbar-md-primary .toolbar-background-md {
+    background-color: transparent;
+  }
+
+  ion-content.content {
+    background-color: color($colors, light);
+
+    // &:before {
+    //   content: '';
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 150px;
+    //   background-color: color($colors, primary);
+    //   // background: linear-gradient(90deg, #3023AE 0%, color($colors, primary) 100%);
+    //   z-index: 0;
+    // }
+  }
+
+  .illustration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background-image: url('https://www.dropbox.com/s/jmrd1syc9x15qfr/asset.svg?raw=1');
+    background-size: cover;
+    background-color: color($colors, primary);
+    z-index: 1;
+  }
+
+  ion-tabs {
+    position: relative;
+    top: auto;
+    left: auto;
+    height: 55px;
+
+    .tabbar {
+      position: relative;
+      opacity: 1;
+    }
+
+    &.tabs-md[tabsPlacement="bottom"] > .tabbar:before {
+      top: auto;
+      bottom: 0;
+    }
+
+    &.tabs-ios .tabbar,
+    &.tabs-md .tabbar {
+      background: transparent;
+    }
+
+    &.tabs-ios .tabbar {
+      border-top: none;
+      border-bottom: 1px solid lightgrey;
+    }
+  }
+
+  .box {
+    background-color: white;
+    margin: 40px 20px 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px 30px 0 rgba(0,0,0, .1);
+    overflow: hidden;
+
+    ion-note {
+      margin: 20px 0 20px;
+    }
+
+  }
+
+  button[ion-fab] {
+    margin: 40px auto;
+    box-shadow: 0 4px 30px 0 rgba(color($colors, primary), .5);
+  }
+
+  ion-note {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.1em;
+    text-align: center;
+  }
+}

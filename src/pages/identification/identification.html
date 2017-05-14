@@ -1,0 +1,53 @@
+<!--
+  Created by ionic-ui.
+
+  Visit http://ionic-ui.io for more pages
+-->
+<ion-header no-border>
+
+  <ion-navbar color="primary">
+  </ion-navbar>
+
+</ion-header>
+
+<div class="illustration">
+</div>
+
+<ion-content padding>
+
+  <div class="box">
+    <div class="identificatin-login">
+
+      <ion-tabs no-shadow>
+        <ion-tab [root]="tab1Root" tabTitle="Log in"></ion-tab>
+        <ion-tab [root]="tab2Root" tabTitle="Sign up"></ion-tab>
+      </ion-tabs>
+
+      <ion-item>
+        <ion-label color="primary" stacked>Email</ion-label>
+        <ion-input type="email" placeholder="Name" value="johndoe@email.com"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" stacked>Password</ion-label>
+        <ion-input type="password" placeholder="Password" value="1234567"></ion-input>
+      </ion-item>
+
+      <ion-note>
+        <a href="#">Forgot Password?</a>
+      </ion-note>
+
+    </div>
+  </div>
+
+  <!-- <ion-fab center> -->
+    <button ion-fab color="primary">
+      <ion-icon name="arrow-forward"></ion-icon>
+    </button>
+  <!-- </ion-fab> -->
+
+  <ion-note>
+    Don't have an account? <a href="#">Create one</a>
+  </ion-note>
+
+</ion-content>
