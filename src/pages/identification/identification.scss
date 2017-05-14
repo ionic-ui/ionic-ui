@@ -28,7 +28,8 @@ page-identification {
     left: 0;
     width: 100%;
     height: 150px;
-    background-image: url('https://www.dropbox.com/s/jmrd1syc9x15qfr/asset.svg?dl=0');
+    background-image: url('https://www.dropbox.com/s/jmrd1syc9x15qfr/asset.svg?raw=1');
+    background-size: cover;
     background-color: color($colors, primary);
     z-index: 1;
   }
@@ -52,6 +53,11 @@ page-identification {
     &.tabs-ios .tabbar,
     &.tabs-md .tabbar {
       background: transparent;
+    }
+
+    &.tabs-ios .tabbar {
+      border-top: none;
+      border-bottom: 1px solid lightgrey;
     }
   }
 
