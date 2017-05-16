@@ -10,18 +10,19 @@
 
 </ion-header>
 
-<div class="illustration">
-</div>
+<ion-content>
 
-<ion-content padding>
+  <ion-card>
+    <ion-card-content>
 
-  <div class="box">
-    <div class="identificatin-login">
-
-      <ion-tabs no-shadow>
-        <ion-tab [root]="tab1Root" tabTitle="Log in"></ion-tab>
-        <ion-tab [root]="tab2Root" tabTitle="Sign up"></ion-tab>
-      </ion-tabs>
+      <ion-segment [(ngModel)]="segment" (ionChange)="updateView()" mode="md">
+        <ion-segment-button value="login">
+          Log in
+        </ion-segment-button>
+        <ion-segment-button value="signup">
+          Sign up
+        </ion-segment-button>
+      </ion-segment>
 
       <ion-item>
         <ion-label color="primary" stacked>Email</ion-label>
@@ -37,14 +38,12 @@
         <a href="#">Forgot Password?</a>
       </ion-note>
 
-    </div>
-  </div>
+    </ion-card-content>
+  </ion-card>
 
-  <!-- <ion-fab center> -->
-    <button ion-fab color="primary">
-      <ion-icon name="arrow-forward"></ion-icon>
-    </button>
-  <!-- </ion-fab> -->
+  <button ion-fab color="primary">
+    <ion-icon name="arrow-forward"></ion-icon>
+  </button>
 
   <ion-note>
     Don't have an account? <a href="#">Create one</a>
