@@ -7,7 +7,13 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class Messages {
 
+  segment = 'messages';
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  updateView() {
+    //
   }
 
 }
