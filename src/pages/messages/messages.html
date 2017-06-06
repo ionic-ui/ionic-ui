@@ -15,7 +15,7 @@
         Messages
       </ion-segment-button>
       <ion-segment-button value="actives">
-        Actives (9)
+        Active (9)
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
@@ -37,9 +37,9 @@
             <img src="https://ionic-ui.github.io/img/sheldon.jpg">
           </ion-avatar>
           <h3>Sheldon</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <p>Interesting. You're afraid of insects and women. Ladybugs must render you catatonic.</p>
           <ion-note item-right>
-            <p>Mon</p>
+            <p>2 min</p>
           </ion-note>
         </button>
         <button ion-item>
@@ -47,9 +47,9 @@
             <img src="https://ionic-ui.github.io/img/howard.jpg">
           </ion-avatar>
           <h3>Howard</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <p>It's called Emily or Cinnamon. I give you actual quotes I've heard Raj say, and you guess if he was talking to his girlfriend or his dog.</p>
           <ion-note item-right>
-            <p>Mon</p>
+            <p>8:33 pm</p>
           </ion-note>
         </button>
         <button ion-item>
@@ -57,9 +57,9 @@
             <img src="https://ionic-ui.github.io/img/leonard.jpg">
           </ion-avatar>
           <h3>Leonard</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <p>Then, of course, rubbing our success in Sheldon's face.</p>
           <ion-note item-right>
-            <p>Mon</p>
+            <p>8:14 pm</p>
           </ion-note>
         </button>
         <button ion-item>
@@ -67,15 +67,15 @@
             <img src="https://ionic-ui.github.io/img/amy.jpg">
           </ion-avatar>
           <h3>Amy</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <p>My mom made it up as an alternative to the Girl Scouts. She didn't want me selling cookies on some street corner like a whore.</p>
           <ion-note item-right>
-            <p>Mon</p>
+            <p>8:00 pm</p>
           </ion-note>
         </button>
       </ion-item-group>
       <ion-item-group>
         <ion-list-header no-margin color="light">
-          Actif
+          Favorite
           <button color="dark" ion-button item-right clear icon-only>
             <ion-icon name="more"></ion-icon>
           </button>
@@ -85,7 +85,7 @@
             <ion-grid no-padding>
               <ion-row>
                 <ion-col>
-                  <ion-avatar active>
+                  <ion-avatar>
                     <img src="https://ionic-ui.github.io/img/bernadette.jpg">
                   </ion-avatar>
                 </ion-col>
@@ -117,7 +117,7 @@
             <ion-grid no-padding>
               <ion-row>
                 <ion-col>
-                  <ion-avatar active>
+                  <ion-avatar>
                     <img src="https://ionic-ui.github.io/img/stuart.jpg">
                   </ion-avatar>
                 </ion-col>
@@ -149,7 +149,7 @@
             <ion-grid no-padding>
               <ion-row>
                 <ion-col>
-                  <ion-avatar active>
+                  <ion-avatar>
                     <img src="https://ionic-ui.github.io/img/penny.jpg">
                   </ion-avatar>
                 </ion-col>
@@ -165,7 +165,7 @@
             <ion-grid no-padding>
               <ion-row>
                 <ion-col>
-                  <ion-avatar active>
+                  <ion-avatar>
                     <img src="https://ionic-ui.github.io/img/amy.jpg">
                   </ion-avatar>
                 </ion-col>
@@ -198,54 +198,104 @@
 
       <ion-item-group>
         <ion-list-header no-margin color="light">
-          Non lu
+          Not read
           <button color="dark" ion-button item-right clear icon-only>
             <ion-icon name="more"></ion-icon>
           </button>
         </ion-list-header>
         <button ion-item>
           <ion-avatar item-left active>
-            <img src="https://ionic-ui.github.io/img/sheldon.jpg">
+            <img src="https://ionic-ui.github.io/img/penny.jpg">
           </ion-avatar>
-          <h3>Sheldon</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <h3>Penny</h3>
+          <p ion-text color="dark">I told you if we were patient, he'd figure it out for himself.</p>
           <ion-note item-right>
-            <p>Mon</p>
+            <p>7:00 pm</p>
           </ion-note>
         </button>
         <button ion-item>
           <ion-avatar item-left>
+            <img src="https://ionic-ui.github.io/img/raj.jpg">
+          </ion-avatar>
+          <h3>Raj</h3>
+          <p ion-text color="dark">Pretty good. She bought the book "Eat, Pray, Love", and used it to set my father's Mercedes on fire.</p>
+          <ion-note item-right>
+            <p>6:55 pm</p>
+          </ion-note>
+        </button>
+        <button ion-item>
+          <ion-avatar active item-left>
+            <img src="https://ionic-ui.github.io/img/stuart.jpg">
+          </ion-avatar>
+          <h3>Stuart</h3>
+          <p ion-text color="dark">Oh, Sheldon, I'm afraid you couldn't be more wrong.</p>
+          <ion-note item-right>
+            <p>6:01 pm</p>
+          </ion-note>
+        </button>
+        <button ion-item>
+          <ion-avatar item-left>
+            <img src="https://ionic-ui.github.io/img/barry.jpg">
+          </ion-avatar>
+          <h3>Barry</h3>
+          <p ion-text color="dark">We're all pathetic and creepy, and can't get girls. That's why we fight robots.</p>
+          <ion-note item-right>
+            <p>5:37 pm</p>
+          </ion-note>
+        </button>
+      </ion-item-group>
+    </div>
+    <div *ngSwitchCase="'actives'">
+      <ion-item-group>
+        <button ion-item>
+          <ion-avatar active item-left>
+            <img src="https://ionic-ui.github.io/img/sheldon.jpg">
+          </ion-avatar>
+          <h3>Sheldon</h3>
+        </button>
+        <button ion-item>
+          <ion-avatar active item-left>
             <img src="https://ionic-ui.github.io/img/howard.jpg">
           </ion-avatar>
           <h3>Howard</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          <ion-note item-right>
-            <p>Mon</p>
-          </ion-note>
         </button>
         <button ion-item>
           <ion-avatar active item-left>
             <img src="https://ionic-ui.github.io/img/leonard.jpg">
           </ion-avatar>
           <h3>Leonard</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          <ion-note item-right>
-            <p>Mon</p>
-          </ion-note>
         </button>
         <button ion-item>
-          <ion-avatar item-left>
+          <ion-avatar active item-left>
             <img src="https://ionic-ui.github.io/img/amy.jpg">
           </ion-avatar>
           <h3>Amy</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          <ion-note item-right>
-            <p>Mon</p>
-          </ion-note>
+        </button>
+        <button ion-item>
+          <ion-avatar active item-left>
+            <img src="https://ionic-ui.github.io/img/penny.jpg">
+          </ion-avatar>
+          <h3>Penny</h3>
+        </button>
+        <button ion-item>
+          <ion-avatar active item-left>
+            <img src="https://ionic-ui.github.io/img/raj.jpg">
+          </ion-avatar>
+          <h3>Raj</h3>
+        </button>
+        <button ion-item>
+          <ion-avatar active item-left>
+            <img src="https://ionic-ui.github.io/img/stuart.jpg">
+          </ion-avatar>
+          <h3>Stuart</h3>
+        </button>
+        <button ion-item>
+          <ion-avatar active item-left>
+            <img src="https://ionic-ui.github.io/img/barry.jpg">
+          </ion-avatar>
+          <h3>Barry</h3>
         </button>
       </ion-item-group>
-    </div>
-    <div *ngSwitchCase="'actives'">
     </div>
   </div>
 </ion-content>
